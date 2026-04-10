@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+
+:root {
+  --font-display: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Off-White / Grey / Sage Green Palette */
+  --surface-base: #F5F5F0;
+  --surface: #FFFFFF;
+  --surface-high: #EEEEE8;
+
+  --primary: #5B8C5A;         /* Sage green */
+  --primary-container: #EDF5ED;
+  --primary-deep: #4A7A49;
+
+  --secondary: #8FAE8F;       /* Light sage */
+  --tertiary: #D4A853;        /* Warm gold */
+
+  --on-surface: #2D2D2D;
+  --on-surface-variant: #7A7A72;
+  --outline-variant: #E0E0D8;
+
+  --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: var(--surface-base);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--on-surface);
+  letter-spacing: -0.02em;
+}
+
+#root { width: 100%; min-height: 100dvh; }
+ul { list-style: none; padding: 0; margin: 0; }
+a { text-decoration: none; color: inherit; }
+
+/* ── Card System (24px radius, soft shadows) ──────── */
+.card-glass {
+  background-color: var(--surface);
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--outline-variant);
+  transition: var(--transition-smooth);
+  overflow: hidden;
+}
+.card-glass:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
+}
+
+/* ── Pro Hover Focus Ring ──────────────────────────── */
+.dashboard-grid {
+  /* Provide stacking context */
+  position: relative;
+}
+.dashboard-grid:has(.focus-card:hover) .focus-card:not(:hover) {
+  filter: blur(3px);
+  opacity: 0.6;
+}
+.focus-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, filter, opacity;
+}
+.focus-card:hover {
+  transform: scale(1.03) !important;
+  z-index: 10;
+  box-shadow: 0 20px 60px rgba(91, 140, 90, 0.12) !important;
+}
+
+/* ── Glassmorphism ─────────────────────────────────── */
+.glass-overlay {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+}
+
+/* ── Buttons ───────────────────────────────────────── */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 16px;
+  padding: 14px 32px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 20px rgba(91, 140, 90, 0.3);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(91, 140, 90, 0.4);
+  background: var(--primary-deep);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--on-surface);
+  border: 1px solid var(--outline-variant);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 14px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+.btn-secondary:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ── Input fields ──────────────────────────────────── */
+.input-field {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid var(--outline-variant);
+  border-radius: 14px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  background: var(--surface);
+  color: var(--on-surface);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.input-field:focus {
+  border-color: var(--primary);
+}
+
+/* ── Dot Grid Background ──────────────────────────── */
+.dot-grid-bg {
+  background-image: radial-gradient(circle, #C8C8BE 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ── Animations ────────────────────────────────────── */
+@keyframes breathingDot {
+  0%   { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(91, 140, 90, 0.7); }
+  50%  { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(91, 140, 90, 0); }
+  100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(91, 140, 90, 0); }
+}
+.breathing-dot {
+  animation: breathingDot 2.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--primary);
+}

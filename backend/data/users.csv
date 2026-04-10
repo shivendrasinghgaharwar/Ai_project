@@ -1,0 +1,501 @@
+user_id,name,interests,experience_level,signup_date
+U0001,Wei Brown,"Data Science, Cloud Computing",Advanced,2024-11-03
+U0002,Amelia Morris,DevOps,Advanced,2024-08-07
+U0003,Boris Brown,"Python Programming, Databases, Artificial Intelligence",Beginner,2024-08-09
+U0004,Elena Roberts,"Machine Learning, Databases, Mobile Development, DevOps",Advanced,2025-05-09
+U0005,Aaliyah Perez,"Artificial Intelligence, Databases, Cloud Computing, Machine Learning",Beginner,2025-03-01
+U0006,Isabella Jackson,"Web Development, Artificial Intelligence, Databases, Machine Learning",Beginner,2024-09-10
+U0007,Erik Anderson,"Web Development, DevOps, Cloud Computing, Machine Learning",Intermediate,2025-03-26
+U0008,Chen Gonzalez,Cybersecurity,Beginner,2024-02-13
+U0009,Priya Edwards,"Artificial Intelligence, Cybersecurity, Web Development, DevOps",Intermediate,2024-11-26
+U0010,Lena Wright,Data Science,Intermediate,2024-04-23
+U0011,Felix Parker,"Cloud Computing, DevOps",Intermediate,2024-10-10
+U0012,Clara Kim,"DevOps, Artificial Intelligence, Cloud Computing",Intermediate,2024-05-08
+U0013,Kenji Miller,"DevOps, Data Science",Advanced,2024-10-01
+U0014,Carlos Taylor,"Artificial Intelligence, Cloud Computing",Advanced,2024-10-28
+U0015,Rosa Howard,Web Development,Intermediate,2024-04-26
+U0016,Elena Anderson,"Python Programming, Cybersecurity, Machine Learning",Intermediate,2024-01-24
+U0017,Ethan Gonzalez,"Machine Learning, Artificial Intelligence, Data Science",Beginner,2024-10-20
+U0018,Rosa Hill,"Artificial Intelligence, DevOps, Machine Learning, Python Programming",Intermediate,2025-04-26
+U0019,Ivan Miller,Databases,Intermediate,2024-02-07
+U0020,Ethan Rodriguez,"Mobile Development, Cloud Computing",Beginner,2024-05-07
+U0021,Amelia Gonzalez,"Mobile Development, Web Development, Databases, Cybersecurity",Intermediate,2024-06-01
+U0022,Anika White,Mobile Development,Advanced,2024-02-20
+U0023,Ananya Roberts,"Cloud Computing, Data Science",Beginner,2024-05-02
+U0024,Yuki Gonzalez,Machine Learning,Beginner,2024-07-28
+U0025,Kai Parker,"Cloud Computing, Python Programming, Web Development, Machine Learning",Advanced,2024-05-24
+U0026,Dina Brown,"Cloud Computing, Web Development",Intermediate,2024-02-28
+U0027,Zara Turner,"Cloud Computing, Machine Learning",Beginner,2024-01-31
+U0028,Mei Morris,"Mobile Development, Cloud Computing, Artificial Intelligence",Beginner,2024-08-27
+U0029,Isla Parker,"Cloud Computing, Cybersecurity, Artificial Intelligence, Web Development",Beginner,2024-11-02
+U0030,Emma Murphy,"DevOps, Cloud Computing, Python Programming, Artificial Intelligence",Beginner,2025-05-07
+U0031,Liam Stewart,"Mobile Development, Python Programming, Machine Learning",Intermediate,2024-09-22
+U0032,Zoya Rivera,"Machine Learning, Databases, Artificial Intelligence",Beginner,2024-08-28
+U0033,Clara Young,"DevOps, Data Science, Machine Learning",Intermediate,2024-07-29
+U0034,Omar Thompson,"Cybersecurity, Python Programming, Artificial Intelligence, Mobile Development",Intermediate,2024-05-09
+U0035,Erik Miller,"Cybersecurity, Python Programming, Artificial Intelligence, Web Development",Beginner,2024-04-06
+U0036,Elena Perez,"Artificial Intelligence, Python Programming, Web Development, Machine Learning",Advanced,2024-03-08
+U0037,Rosa Wright,"Data Science, Python Programming, Web Development, DevOps",Beginner,2024-06-08
+U0038,Sophia Gonzalez,"Data Science, Web Development, Mobile Development, Cybersecurity",Beginner,2024-11-27
+U0039,Evelyn Scott,"Cybersecurity, Cloud Computing, Databases",Intermediate,2024-08-29
+U0040,Oscar Lopez,"Databases, Web Development",Advanced,2024-09-17
+U0041,Harper Bell,Cloud Computing,Intermediate,2024-06-23
+U0042,Aaliyah Reed,Cloud Computing,Advanced,2024-06-01
+U0043,Lena Bell,"Artificial Intelligence, Cybersecurity",Intermediate,2024-06-25
+U0044,Nadia Gonzalez,"Artificial Intelligence, DevOps, Web Development, Cybersecurity",Beginner,2024-10-19
+U0045,Leo Hernandez,"Python Programming, DevOps, Artificial Intelligence, Cybersecurity",Intermediate,2024-07-16
+U0046,Evelyn Scott,Machine Learning,Advanced,2025-05-09
+U0047,Nadia Bell,Artificial Intelligence,Beginner,2024-09-26
+U0048,Dina Patel,"Databases, Machine Learning",Beginner,2024-08-28
+U0049,Hiroshi Harris,"Data Science, DevOps, Databases, Machine Learning",Advanced,2025-01-02
+U0050,Lena Bell,Mobile Development,Beginner,2024-04-30
+U0051,Rosa Hernandez,Databases,Beginner,2025-01-24
+U0052,Logan Wright,"Cloud Computing, Python Programming",Beginner,2024-06-15
+U0053,Ava Thompson,"DevOps, Databases, Machine Learning",Beginner,2024-09-28
+U0054,Jade Nelson,"Machine Learning, Mobile Development",Beginner,2024-11-08
+U0055,Yara Perez,"Artificial Intelligence, Machine Learning",Beginner,2024-08-24
+U0056,Leila Lopez,"Python Programming, Artificial Intelligence, Cloud Computing",Advanced,2024-10-06
+U0057,Arjun Brown,"DevOps, Cloud Computing, Databases, Mobile Development",Intermediate,2024-08-21
+U0058,Isla Taylor,"Artificial Intelligence, Data Science, Web Development, Mobile Development",Advanced,2024-07-02
+U0059,Vikram Parker,"Python Programming, Databases, Cloud Computing",Beginner,2024-10-16
+U0060,Ethan Rivera,"Cloud Computing, Web Development, DevOps, Data Science",Advanced,2024-04-07
+U0061,Leila Campbell,"Data Science, Python Programming",Intermediate,2025-02-07
+U0062,Zoya Johnson,"Machine Learning, Data Science, Cloud Computing",Intermediate,2025-01-17
+U0063,Marco Anderson,"Machine Learning, Cybersecurity",Intermediate,2024-09-28
+U0064,Aaliyah Cook,"Cloud Computing, Artificial Intelligence",Intermediate,2025-01-17
+U0065,Tariq Rogers,Artificial Intelligence,Beginner,2024-03-13
+U0066,Zara Bell,"Cybersecurity, DevOps, Data Science, Databases",Intermediate,2024-01-08
+U0067,Hiroshi Baker,Artificial Intelligence,Intermediate,2024-12-10
+U0068,Hiroshi Carter,"DevOps, Data Science, Web Development, Artificial Intelligence",Beginner,2024-11-13
+U0069,Erik Rivera,"Data Science, Artificial Intelligence",Advanced,2024-06-03
+U0070,Jade Miller,"Python Programming, Mobile Development",Intermediate,2024-09-09
+U0071,James Garcia,"Cybersecurity, Machine Learning",Intermediate,2024-08-20
+U0072,Boris Phillips,"Mobile Development, Machine Learning, Databases, DevOps",Beginner,2025-03-02
+U0073,Lena Perez,"Cloud Computing, Python Programming, DevOps, Data Science",Intermediate,2024-08-15
+U0074,Priya Morgan,"Data Science, DevOps, Cybersecurity",Beginner,2024-07-22
+U0075,Chen Taylor,Artificial Intelligence,Beginner,2024-12-05
+U0076,Dmitri Turner,Python Programming,Intermediate,2024-05-04
+U0077,Aiden Morris,"Data Science, Cybersecurity",Beginner,2024-10-27
+U0078,Dmitri Reed,"DevOps, Machine Learning",Advanced,2024-01-02
+U0079,Chen Morgan,"Machine Learning, Cybersecurity",Intermediate,2025-02-12
+U0080,Yuki Miller,Machine Learning,Beginner,2024-07-02
+U0081,Priya Carter,"Python Programming, Machine Learning, Cloud Computing",Beginner,2024-03-05
+U0082,Marco Adams,Data Science,Intermediate,2024-08-17
+U0083,Elena Green,Artificial Intelligence,Advanced,2024-04-23
+U0084,Emma Edwards,"Artificial Intelligence, Python Programming, Cybersecurity",Intermediate,2025-03-09
+U0085,Felix Kim,Artificial Intelligence,Advanced,2025-04-10
+U0086,Zoya Brown,DevOps,Advanced,2024-03-16
+U0087,Lucas Davis,"Mobile Development, Cybersecurity, DevOps",Intermediate,2024-11-01
+U0088,Vikram Lopez,"Data Science, Mobile Development, Web Development, Artificial Intelligence",Intermediate,2025-03-30
+U0089,Kenji Young,"Artificial Intelligence, Databases, Cybersecurity",Advanced,2024-02-18
+U0090,Sana Kim,"Cloud Computing, DevOps, Machine Learning",Advanced,2025-04-17
+U0091,Hana Brown,Data Science,Beginner,2024-08-09
+U0092,Logan Collins,"Machine Learning, Cybersecurity, Python Programming",Advanced,2025-05-04
+U0093,Nadia Phillips,Databases,Intermediate,2025-03-23
+U0094,Anika Bell,Cloud Computing,Advanced,2024-06-08
+U0095,Ravi Garcia,"Machine Learning, Artificial Intelligence",Beginner,2025-03-09
+U0096,Charlotte Clark,"Data Science, Cloud Computing, Web Development",Intermediate,2025-03-08
+U0097,Olivia Mitchell,"Python Programming, Machine Learning, Cloud Computing",Advanced,2025-01-25
+U0098,Jun Rivera,"DevOps, Python Programming, Machine Learning",Beginner,2024-10-16
+U0099,Felix Brown,"Python Programming, Data Science",Advanced,2024-09-28
+U0100,Dmitri Robinson,"Artificial Intelligence, DevOps, Machine Learning, Mobile Development",Intermediate,2025-01-04
+U0101,Erik Sanchez,Python Programming,Beginner,2024-03-21
+U0102,Ethan Campbell,Cloud Computing,Intermediate,2024-12-04
+U0103,Anika Scott,"Databases, Cloud Computing, Web Development, Mobile Development",Advanced,2024-02-28
+U0104,Clara Kim,Cloud Computing,Advanced,2024-12-13
+U0105,Lena Adams,"Python Programming, Web Development, Databases",Advanced,2024-01-29
+U0106,Aarav Thomas,"Web Development, Machine Learning, Cloud Computing",Intermediate,2024-06-16
+U0107,Amelia Patel,"Databases, Machine Learning, Cybersecurity, Web Development",Advanced,2024-12-26
+U0108,Kenji Green,"Data Science, Databases, Python Programming",Intermediate,2024-01-10
+U0109,Dina Rivera,DevOps,Advanced,2024-08-07
+U0110,Felix Evans,"Cloud Computing, Data Science, Databases, Python Programming",Intermediate,2024-03-28
+U0111,Dina Cook,"Data Science, Databases, Mobile Development",Beginner,2024-08-11
+U0112,Felix Adams,Databases,Intermediate,2025-01-16
+U0113,Tariq Hernandez,"Machine Learning, Data Science, Cybersecurity",Advanced,2024-09-18
+U0114,Fatima Bailey,"DevOps, Machine Learning, Web Development",Beginner,2024-03-15
+U0115,Leila Taylor,"Mobile Development, Machine Learning",Advanced,2024-02-08
+U0116,Yuki Richardson,"Artificial Intelligence, Mobile Development, DevOps, Databases",Advanced,2024-06-10
+U0117,Evelyn Wright,Artificial Intelligence,Intermediate,2024-11-19
+U0118,Isla Morris,"Mobile Development, Python Programming, DevOps",Advanced,2024-02-07
+U0119,Jun Lopez,"Python Programming, Mobile Development, DevOps, Databases",Intermediate,2024-02-09
+U0120,Isabella Perez,"Artificial Intelligence, Cybersecurity, Python Programming, Web Development",Advanced,2024-11-29
+U0121,Fatima Lee,"Cybersecurity, Machine Learning, Python Programming, Web Development",Beginner,2025-02-19
+U0122,Tariq Howard,Cybersecurity,Advanced,2024-03-29
+U0123,Emma Moore,"Artificial Intelligence, Cybersecurity, Machine Learning, Mobile Development",Intermediate,2025-04-14
+U0124,Rosa Robinson,"DevOps, Python Programming, Mobile Development, Cybersecurity",Intermediate,2024-02-18
+U0125,Leo Thompson,"Mobile Development, Machine Learning, DevOps",Beginner,2024-10-25
+U0126,Elijah Rivera,"Cloud Computing, Databases, Machine Learning",Advanced,2024-12-28
+U0127,Mason White,"DevOps, Machine Learning, Data Science, Mobile Development",Advanced,2024-08-04
+U0128,Elena Smith,"Cloud Computing, Machine Learning, Web Development",Intermediate,2025-04-30
+U0129,Lena Taylor,"Machine Learning, Mobile Development",Beginner,2024-05-31
+U0130,Logan Green,DevOps,Advanced,2024-03-08
+U0131,Yara Rodriguez,"Machine Learning, Mobile Development",Advanced,2024-08-12
+U0132,Emma Young,"Web Development, Artificial Intelligence, Cloud Computing",Advanced,2025-02-05
+U0133,Kai Hernandez,"Cloud Computing, Artificial Intelligence",Beginner,2024-07-07
+U0134,Zoya Lopez,"Databases, Cybersecurity, Mobile Development",Beginner,2025-02-22
+U0135,Wei Rogers,"Cloud Computing, Python Programming",Advanced,2024-09-03
+U0136,Boris Gonzalez,Cybersecurity,Beginner,2024-05-25
+U0137,Mason Stewart,"Cloud Computing, Artificial Intelligence",Advanced,2024-03-16
+U0138,Sven Jones,"Artificial Intelligence, DevOps",Beginner,2024-07-31
+U0139,Ethan Walker,"Web Development, Databases, Data Science",Intermediate,2024-04-24
+U0140,Olivia Lee,DevOps,Beginner,2024-03-11
+U0141,Noah Thompson,"Machine Learning, Artificial Intelligence, Cybersecurity, Cloud Computing",Beginner,2025-04-08
+U0142,Mason Smith,"Web Development, Machine Learning, Databases",Beginner,2025-02-01
+U0143,Rosa Moore,"Data Science, Python Programming, Web Development",Intermediate,2024-11-23
+U0144,Dina Brown,Artificial Intelligence,Advanced,2024-10-01
+U0145,Liam Roberts,"Machine Learning, Cloud Computing",Intermediate,2024-01-01
+U0146,Ravi Moore,"Machine Learning, Data Science, DevOps, Python Programming",Advanced,2024-10-05
+U0147,Liam Robinson,"Python Programming, Databases, DevOps, Machine Learning",Advanced,2024-01-09
+U0148,Ravi Morris,DevOps,Beginner,2025-01-10
+U0149,Charlotte Sanchez,"Machine Learning, Python Programming, DevOps",Advanced,2024-06-22
+U0150,Yuki Cook,"Artificial Intelligence, Machine Learning, Cybersecurity, Python Programming",Advanced,2025-02-01
+U0151,Dina Johnson,"Web Development, Python Programming, Mobile Development",Beginner,2024-06-10
+U0152,Jun Green,"Cybersecurity, Artificial Intelligence, Cloud Computing, Python Programming",Advanced,2024-04-07
+U0153,Rosa Clark,DevOps,Intermediate,2024-03-04
+U0154,Boris Kim,"Artificial Intelligence, Databases, DevOps, Data Science",Intermediate,2024-12-20
+U0155,Omar Lewis,"Data Science, Databases, Mobile Development",Intermediate,2024-11-04
+U0156,Carlos Baker,"DevOps, Data Science, Cybersecurity",Intermediate,2024-12-04
+U0157,Vikram White,"Mobile Development, Databases, Machine Learning, DevOps",Intermediate,2024-06-28
+U0158,Kai Johnson,"Mobile Development, Databases, Cloud Computing",Advanced,2025-02-09
+U0159,Ava Brown,"DevOps, Cybersecurity, Machine Learning, Python Programming",Beginner,2025-03-10
+U0160,Zoya Johnson,"Data Science, Web Development",Advanced,2024-07-06
+U0161,Elena Robinson,Mobile Development,Beginner,2024-12-13
+U0162,Kai Richardson,"DevOps, Artificial Intelligence, Data Science",Advanced,2024-03-11
+U0163,Elena Walker,"Cloud Computing, Web Development, Data Science",Beginner,2025-01-11
+U0164,Carlos Scott,"Cybersecurity, Data Science, Cloud Computing, Databases",Intermediate,2024-12-26
+U0165,Kai Thomas,"Artificial Intelligence, Web Development, Data Science",Beginner,2025-03-12
+U0166,Mia Wright,"Artificial Intelligence, Data Science",Advanced,2025-05-10
+U0167,Sana Phillips,"Data Science, Cybersecurity, Cloud Computing",Intermediate,2025-03-11
+U0168,Arjun Evans,"DevOps, Cybersecurity",Beginner,2024-03-03
+U0169,Wei Morris,"Web Development, Artificial Intelligence",Beginner,2024-07-03
+U0170,Boris Lopez,"Mobile Development, Data Science",Beginner,2024-06-07
+U0171,Nina Evans,"Cybersecurity, Databases, Mobile Development, Artificial Intelligence",Advanced,2024-02-07
+U0172,Aiden Howard,"Data Science, Artificial Intelligence, Cybersecurity",Advanced,2024-09-21
+U0173,Clara Davis,"Machine Learning, Databases",Advanced,2025-04-11
+U0174,Ava Cook,Cybersecurity,Beginner,2024-06-04
+U0175,Mei Martinez,"Web Development, DevOps, Cloud Computing",Beginner,2024-05-08
+U0176,Wei Roberts,"Machine Learning, Cloud Computing, Data Science",Advanced,2024-11-24
+U0177,Mei Carter,"Machine Learning, DevOps",Advanced,2024-01-22
+U0178,Olivia Jones,Mobile Development,Intermediate,2024-11-29
+U0179,Ananya Sanchez,"Mobile Development, Python Programming, Artificial Intelligence, DevOps",Advanced,2024-05-28
+U0180,Isla Hill,"Databases, Cloud Computing",Intermediate,2024-02-07
+U0181,Ava Martinez,"Databases, Artificial Intelligence, Cybersecurity, Data Science",Intermediate,2024-11-06
+U0182,Elijah Lee,"DevOps, Databases, Machine Learning",Intermediate,2024-09-20
+U0183,Charlotte Lee,"Artificial Intelligence, Data Science",Intermediate,2024-08-18
+U0184,Oscar Rodriguez,Python Programming,Intermediate,2025-04-29
+U0185,Leo Bell,"Web Development, Machine Learning, DevOps, Cloud Computing",Advanced,2024-06-09
+U0186,Fatima Stewart,"Artificial Intelligence, Cybersecurity",Intermediate,2024-09-12
+U0187,Jun Scott,Data Science,Intermediate,2024-09-15
+U0188,Dina Cox,"Web Development, DevOps",Beginner,2024-01-26
+U0189,Rosa Scott,"Cloud Computing, Cybersecurity, Python Programming, Databases",Beginner,2024-08-08
+U0190,Harper Murphy,"DevOps, Databases, Mobile Development",Beginner,2024-07-24
+U0191,Ethan Nelson,"DevOps, Cybersecurity",Intermediate,2024-02-07
+U0192,Leo Green,"Cybersecurity, Cloud Computing, Data Science, Artificial Intelligence",Beginner,2024-07-20
+U0193,Boris Morris,"Cybersecurity, DevOps, Machine Learning",Beginner,2024-11-04
+U0194,Felix Green,Python Programming,Beginner,2024-03-11
+U0195,Nadia Rogers,"Cybersecurity, Artificial Intelligence, Machine Learning, Cloud Computing",Advanced,2024-03-12
+U0196,Erik Cooper,"Machine Learning, Databases, Cloud Computing",Advanced,2024-06-21
+U0197,Lena Evans,"Artificial Intelligence, Python Programming, DevOps",Intermediate,2024-12-10
+U0198,James Howard,"Mobile Development, Cloud Computing, Python Programming, Cybersecurity",Intermediate,2024-05-15
+U0199,Kenji Edwards,Mobile Development,Intermediate,2024-03-28
+U0200,Yara Rodriguez,"Python Programming, Data Science",Beginner,2024-01-10
+U0201,Zoya Lee,"Machine Learning, Databases, Web Development, Artificial Intelligence",Advanced,2025-01-31
+U0202,Hana Bell,Machine Learning,Advanced,2024-04-16
+U0203,Erik Phillips,"Cybersecurity, Databases, DevOps, Data Science",Intermediate,2025-04-12
+U0204,Tariq Baker,"Cloud Computing, Artificial Intelligence, Web Development",Beginner,2024-05-22
+U0205,Isla Hernandez,"Cloud Computing, Web Development, Artificial Intelligence",Intermediate,2024-09-02
+U0206,Clara Gonzalez,"Cloud Computing, Data Science, Databases",Intermediate,2025-02-23
+U0207,Clara Cox,"Cloud Computing, Python Programming",Intermediate,2025-05-04
+U0208,Mason Clark,"Cloud Computing, Artificial Intelligence, Web Development, Data Science",Advanced,2024-05-18
+U0209,Aaliyah Davis,Mobile Development,Advanced,2024-10-27
+U0210,Priya Moore,Cybersecurity,Beginner,2024-11-22
+U0211,Kenji Williams,Databases,Intermediate,2025-01-02
+U0212,Hana Garcia,"Python Programming, Cybersecurity",Beginner,2024-07-27
+U0213,Hana Hill,"Cloud Computing, DevOps",Intermediate,2024-11-26
+U0214,Ava Rivera,Mobile Development,Beginner,2024-09-30
+U0215,Noah Rivera,"Databases, Machine Learning",Beginner,2025-03-04
+U0216,Nina Morris,"Machine Learning, Cloud Computing, Python Programming, Artificial Intelligence",Intermediate,2024-10-17
+U0217,Charlotte Cooper,"Cloud Computing, Artificial Intelligence, Cybersecurity",Beginner,2025-03-11
+U0218,Axel Jackson,"Data Science, DevOps",Beginner,2025-01-09
+U0219,Dina Turner,"Machine Learning, Python Programming, DevOps",Intermediate,2024-10-17
+U0220,Fatima Anderson,"Databases, Cybersecurity, DevOps, Python Programming",Intermediate,2024-12-08
+U0221,Logan Anderson,"Artificial Intelligence, DevOps",Beginner,2024-01-04
+U0222,Hiroshi Robinson,"Artificial Intelligence, Cloud Computing",Intermediate,2024-06-03
+U0223,Sophia Martin,"Web Development, Python Programming, Data Science",Intermediate,2024-06-06
+U0224,Arjun Walker,"Data Science, Cloud Computing, DevOps",Advanced,2024-04-23
+U0225,Zara Cox,"Artificial Intelligence, Machine Learning",Intermediate,2025-01-17
+U0226,Boris Young,"Cybersecurity, Web Development, Mobile Development, DevOps",Advanced,2025-03-23
+U0227,Mason Adams,"Cybersecurity, DevOps, Data Science, Cloud Computing",Beginner,2024-02-01
+U0228,Wei Nelson,"Machine Learning, DevOps",Advanced,2024-08-14
+U0229,James Campbell,"Mobile Development, Artificial Intelligence",Beginner,2025-04-05
+U0230,Kai Rogers,Artificial Intelligence,Beginner,2024-09-19
+U0231,Marco Lopez,Cybersecurity,Intermediate,2024-12-10
+U0232,Jun Edwards,Databases,Intermediate,2025-02-22
+U0233,Aarav Collins,"Mobile Development, Data Science",Beginner,2024-08-04
+U0234,Clara Parker,Cybersecurity,Beginner,2025-04-23
+U0235,Lucas Cooper,"Python Programming, Cloud Computing, Databases, Data Science",Beginner,2025-01-27
+U0236,Marco Lewis,"Artificial Intelligence, Databases, Cybersecurity, Python Programming",Advanced,2025-05-08
+U0237,Harper Turner,"Data Science, Machine Learning, Databases",Advanced,2024-03-06
+U0238,Zara Cook,Python Programming,Intermediate,2024-08-25
+U0239,Anika Baker,"Web Development, Mobile Development, Artificial Intelligence, Machine Learning",Beginner,2024-05-21
+U0240,Fatima Cooper,Python Programming,Advanced,2024-08-02
+U0241,Liam Moore,"Data Science, Mobile Development",Advanced,2024-01-18
+U0242,Kai Mitchell,Web Development,Advanced,2024-01-23
+U0243,Felix Wright,"Cybersecurity, Web Development",Beginner,2024-03-12
+U0244,Vikram Hernandez,"Mobile Development, DevOps, Web Development",Intermediate,2025-03-24
+U0245,Elijah Phillips,"Databases, Cloud Computing",Intermediate,2024-02-01
+U0246,Yuki Roberts,"Cybersecurity, Artificial Intelligence, Python Programming, Machine Learning",Advanced,2024-12-09
+U0247,Yara Morris,"Databases, Mobile Development, Machine Learning",Intermediate,2024-07-11
+U0248,Carlos Stewart,"Web Development, Mobile Development, Cloud Computing, Databases",Advanced,2024-03-14
+U0249,Axel Rivera,Cybersecurity,Intermediate,2025-05-10
+U0250,Marco Gonzalez,"Databases, Web Development",Intermediate,2024-04-14
+U0251,Nadia Turner,Artificial Intelligence,Intermediate,2024-02-17
+U0252,Fatima Williams,"Databases, Python Programming, Data Science",Beginner,2025-02-15
+U0253,Dmitri Hill,"DevOps, Cloud Computing",Beginner,2024-04-18
+U0254,Fatima Cox,Artificial Intelligence,Beginner,2024-12-22
+U0255,Ananya Walker,"Cybersecurity, DevOps",Intermediate,2024-07-13
+U0256,Axel Baker,"Cloud Computing, Mobile Development, DevOps",Advanced,2025-03-27
+U0257,Omar Lopez,Artificial Intelligence,Intermediate,2025-04-13
+U0258,Ananya Lewis,"Databases, Python Programming, Web Development",Advanced,2024-03-15
+U0259,Liam Martin,"Cloud Computing, Machine Learning, Web Development, Cybersecurity",Beginner,2024-07-13
+U0260,Oscar Scott,"Cloud Computing, Artificial Intelligence, Cybersecurity",Intermediate,2024-03-27
+U0261,Ravi Martinez,"Cybersecurity, Artificial Intelligence",Beginner,2025-04-14
+U0262,Ava Adams,Data Science,Advanced,2024-01-25
+U0263,Aarav Young,"Web Development, Data Science",Advanced,2024-03-18
+U0264,Sophia Thomas,"DevOps, Python Programming, Artificial Intelligence, Mobile Development",Intermediate,2024-01-09
+U0265,Aarav Baker,"Python Programming, Mobile Development, Cloud Computing, Artificial Intelligence",Intermediate,2024-01-09
+U0266,Sven Rogers,"Data Science, Mobile Development",Advanced,2024-03-17
+U0267,Priya Taylor,"DevOps, Cloud Computing, Databases",Beginner,2024-07-10
+U0268,Felix Lopez,"Web Development, Cloud Computing",Advanced,2025-02-27
+U0269,Mason Turner,Data Science,Intermediate,2024-07-13
+U0270,Yara Gonzalez,"Python Programming, Mobile Development, Machine Learning, Cybersecurity",Intermediate,2025-03-08
+U0271,Sven Turner,"Mobile Development, Data Science, Python Programming",Beginner,2024-04-18
+U0272,Hana Jackson,Data Science,Advanced,2025-04-18
+U0273,Chen Bailey,Machine Learning,Intermediate,2024-01-09
+U0274,Ananya Carter,"Databases, Data Science",Intermediate,2024-03-24
+U0275,Priya Nelson,"Cybersecurity, DevOps, Databases, Artificial Intelligence",Advanced,2024-03-12
+U0276,Mason Green,"Python Programming, Data Science, Databases",Beginner,2025-03-05
+U0277,Mia Harris,"DevOps, Python Programming, Cloud Computing, Databases",Intermediate,2024-09-08
+U0278,Kenji Clark,"Databases, Machine Learning, Mobile Development, Python Programming",Advanced,2024-05-31
+U0279,Oscar Evans,Data Science,Intermediate,2024-03-19
+U0280,Yara Evans,"Databases, DevOps",Intermediate,2024-02-24
+U0281,Isabella Patel,"Artificial Intelligence, DevOps, Cloud Computing",Beginner,2024-03-08
+U0282,Isabella Anderson,"Artificial Intelligence, Cybersecurity, Databases, Python Programming",Beginner,2024-02-15
+U0283,Ravi Gonzalez,Mobile Development,Advanced,2025-02-05
+U0284,Erik Bell,"Python Programming, Cloud Computing, Databases, Web Development",Beginner,2025-01-06
+U0285,Oscar Nelson,"Databases, Machine Learning",Beginner,2024-05-17
+U0286,Isla Jackson,"Machine Learning, Data Science, Mobile Development, Web Development",Intermediate,2024-08-03
+U0287,Isla Hill,DevOps,Intermediate,2025-04-28
+U0288,Oscar Edwards,"Mobile Development, Web Development, Artificial Intelligence, Python Programming",Beginner,2024-06-04
+U0289,Aarav Richardson,"DevOps, Databases, Mobile Development, Web Development",Intermediate,2024-08-08
+U0290,Harper White,"Mobile Development, Web Development, Artificial Intelligence",Intermediate,2024-03-31
+U0291,Nina Cox,"Cloud Computing, Artificial Intelligence, Web Development",Intermediate,2024-07-11
+U0292,Chen Reed,"DevOps, Data Science, Web Development, Cloud Computing",Advanced,2024-04-02
+U0293,Olivia Richardson,"Web Development, Artificial Intelligence, Cloud Computing, Databases",Advanced,2024-02-05
+U0294,Jade Campbell,"Machine Learning, Cloud Computing, Web Development, Mobile Development",Advanced,2024-03-19
+U0295,Anika Morris,"Data Science, Artificial Intelligence, Cybersecurity, Cloud Computing",Intermediate,2024-09-30
+U0296,Marco Baker,DevOps,Advanced,2025-04-03
+U0297,Mason Garcia,"DevOps, Machine Learning",Advanced,2024-11-09
+U0298,Emma Nelson,"DevOps, Databases, Data Science, Python Programming",Beginner,2024-05-12
+U0299,Zara Green,"Artificial Intelligence, DevOps",Intermediate,2024-08-25
+U0300,Evelyn Clark,Artificial Intelligence,Beginner,2024-05-31
+U0301,Marco Rivera,Data Science,Advanced,2024-03-13
+U0302,Clara White,"Artificial Intelligence, Web Development, Mobile Development",Intermediate,2024-08-31
+U0303,Logan Wright,"DevOps, Data Science, Cloud Computing, Python Programming",Advanced,2024-02-28
+U0304,Liam Morgan,"Data Science, Machine Learning, Web Development",Advanced,2024-03-30
+U0305,Arjun Harris,"Artificial Intelligence, Web Development, Databases, DevOps",Beginner,2024-04-05
+U0306,Sven Walker,Mobile Development,Beginner,2024-08-18
+U0307,Anika Robinson,Web Development,Beginner,2024-05-22
+U0308,Lucas Nelson,Cybersecurity,Beginner,2024-07-06
+U0309,Erik Taylor,"Data Science, Cloud Computing, Artificial Intelligence, Cybersecurity",Advanced,2024-06-09
+U0310,Leo Perez,"Mobile Development, Data Science, DevOps, Machine Learning",Intermediate,2024-11-12
+U0311,Yuki Reed,"Mobile Development, Data Science, Machine Learning",Intermediate,2024-03-01
+U0312,Priya White,Machine Learning,Intermediate,2024-12-21
+U0313,Elijah Green,"Databases, Machine Learning, Mobile Development, Web Development",Beginner,2024-09-06
+U0314,Yuki Gonzalez,"Artificial Intelligence, Cloud Computing",Beginner,2024-04-05
+U0315,Sana Cook,"Mobile Development, Python Programming, DevOps, Cybersecurity",Intermediate,2024-03-10
+U0316,Fatima Reed,"Cybersecurity, Mobile Development, Artificial Intelligence, Web Development",Advanced,2024-09-08
+U0317,Marco Evans,"Artificial Intelligence, Machine Learning, Data Science, Cloud Computing",Beginner,2025-02-11
+U0318,Zara Thompson,Cloud Computing,Beginner,2024-10-02
+U0319,Rosa Martinez,"Mobile Development, Artificial Intelligence, Data Science, Cloud Computing",Beginner,2024-05-17
+U0320,Elena Baker,Artificial Intelligence,Advanced,2024-04-21
+U0321,Anika Garcia,"Cloud Computing, Python Programming",Intermediate,2024-05-14
+U0322,Clara Bell,Artificial Intelligence,Beginner,2025-02-01
+U0323,Priya Thomas,"Mobile Development, Databases, Machine Learning",Advanced,2024-03-12
+U0324,Ananya Reed,"Python Programming, DevOps",Advanced,2024-05-23
+U0325,Mei Lee,"Cloud Computing, Mobile Development, Data Science",Beginner,2025-05-07
+U0326,Jade Rivera,Cloud Computing,Advanced,2024-03-05
+U0327,Aiden Moore,"DevOps, Web Development",Advanced,2024-07-20
+U0328,Lena Rodriguez,"Databases, Mobile Development, Artificial Intelligence",Beginner,2024-11-20
+U0329,Isabella Walker,"DevOps, Artificial Intelligence, Cybersecurity",Intermediate,2024-10-24
+U0330,Aarav Bell,Artificial Intelligence,Advanced,2024-12-06
+U0331,Ravi Morgan,Cybersecurity,Intermediate,2024-04-21
+U0332,Anika Reed,"Artificial Intelligence, Cloud Computing",Intermediate,2025-02-28
+U0333,Rosa Harris,"Mobile Development, Artificial Intelligence",Intermediate,2025-04-02
+U0334,Ethan Johnson,Artificial Intelligence,Beginner,2024-03-04
+U0335,Arjun Wright,"Python Programming, Databases, Web Development, DevOps",Beginner,2025-03-27
+U0336,Isla Martinez,"Data Science, DevOps, Cloud Computing",Beginner,2024-07-09
+U0337,Mei Williams,"Cloud Computing, Web Development, Databases, DevOps",Beginner,2024-12-26
+U0338,Logan Patel,"Artificial Intelligence, Data Science",Beginner,2024-10-30
+U0339,Zara Adams,"Python Programming, Mobile Development, DevOps, Databases",Beginner,2025-03-16
+U0340,Anika Parker,"Artificial Intelligence, Data Science",Beginner,2024-07-15
+U0341,Isabella Edwards,Data Science,Intermediate,2024-07-07
+U0342,Isla Davis,"Machine Learning, Mobile Development, Data Science, Cloud Computing",Advanced,2024-01-05
+U0343,Mei Wright,"Web Development, Machine Learning, Databases",Advanced,2024-12-17
+U0344,Zoya Bell,"Data Science, Mobile Development",Beginner,2025-01-20
+U0345,Amelia Carter,"DevOps, Databases, Mobile Development, Cybersecurity",Beginner,2024-05-06
+U0346,Chen Turner,Web Development,Advanced,2024-11-03
+U0347,Rosa Sanchez,Cloud Computing,Beginner,2024-09-22
+U0348,Fatima Collins,"Cloud Computing, Python Programming, Web Development, Artificial Intelligence",Intermediate,2024-02-27
+U0349,Priya Scott,Cybersecurity,Beginner,2024-07-03
+U0350,Sana Davis,"Mobile Development, Databases, DevOps, Cloud Computing",Advanced,2024-03-29
+U0351,Hana Cox,Python Programming,Advanced,2024-02-04
+U0352,Sophia Martin,"Python Programming, Mobile Development",Intermediate,2024-09-16
+U0353,Rosa Roberts,"Databases, Mobile Development, Data Science, DevOps",Advanced,2024-10-02
+U0354,Evelyn Jackson,Cloud Computing,Beginner,2024-09-18
+U0355,Ananya Howard,"Cybersecurity, DevOps",Intermediate,2024-10-27
+U0356,Lucas White,"Web Development, Python Programming, Mobile Development, Cybersecurity",Intermediate,2024-02-29
+U0357,Dina Perez,Cloud Computing,Advanced,2025-01-14
+U0358,Yuki Miller,Machine Learning,Advanced,2024-01-06
+U0359,Arjun Scott,"Cybersecurity, Mobile Development, Cloud Computing",Beginner,2024-07-09
+U0360,Aiden Collins,"Data Science, Python Programming, DevOps",Intermediate,2024-05-19
+U0361,Lucas Martin,Artificial Intelligence,Intermediate,2024-09-18
+U0362,Elena Williams,"Mobile Development, Machine Learning, DevOps, Data Science",Intermediate,2025-01-30
+U0363,Charlotte Bailey,Web Development,Advanced,2024-09-17
+U0364,Aarav Johnson,Web Development,Beginner,2024-08-29
+U0365,Elena Robinson,"Machine Learning, Python Programming",Advanced,2025-02-15
+U0366,Marco Hernandez,"Web Development, Databases, DevOps",Intermediate,2025-02-26
+U0367,Mia Nelson,"Data Science, Cybersecurity, Python Programming",Beginner,2024-04-24
+U0368,Emma Cox,"Data Science, Artificial Intelligence, Cloud Computing, Databases",Intermediate,2024-06-16
+U0369,Isabella Gonzalez,"Python Programming, DevOps, Web Development, Machine Learning",Advanced,2025-02-05
+U0370,Isla Collins,"Artificial Intelligence, DevOps",Advanced,2025-05-12
+U0371,Omar Sanchez,"Cybersecurity, Web Development",Beginner,2024-01-04
+U0372,Jade Smith,"Cybersecurity, DevOps",Advanced,2025-03-05
+U0373,Sophia Richardson,"Python Programming, Databases, Cloud Computing",Beginner,2024-04-15
+U0374,Priya Young,"Python Programming, Machine Learning, Cloud Computing, Mobile Development",Beginner,2025-04-16
+U0375,Kenji Bailey,"DevOps, Artificial Intelligence, Data Science, Cloud Computing",Beginner,2024-09-15
+U0376,Harper Roberts,"Data Science, Python Programming, Databases, DevOps",Beginner,2024-05-01
+U0377,Vikram Martin,"Databases, DevOps, Cybersecurity",Intermediate,2024-05-19
+U0378,Kenji Brown,"Machine Learning, Data Science",Beginner,2024-02-24
+U0379,Mei Wright,"DevOps, Databases, Data Science, Cloud Computing",Intermediate,2025-05-08
+U0380,Ananya Wright,"Artificial Intelligence, Cloud Computing, Data Science",Beginner,2024-03-21
+U0381,Isla Reed,Web Development,Intermediate,2024-03-16
+U0382,Isabella Evans,"DevOps, Databases",Advanced,2024-01-26
+U0383,Isla Martin,"Python Programming, Databases",Intermediate,2024-10-11
+U0384,Oscar Garcia,"Data Science, Machine Learning, Mobile Development, Python Programming",Beginner,2025-03-01
+U0385,Zara Davis,"Databases, DevOps",Advanced,2024-11-18
+U0386,Mason Carter,"Data Science, Python Programming, Mobile Development",Beginner,2025-04-07
+U0387,Zoya Rogers,"Data Science, DevOps",Beginner,2024-01-22
+U0388,Axel Williams,"Mobile Development, Databases",Advanced,2024-07-21
+U0389,Omar Smith,"Databases, Machine Learning, DevOps, Data Science",Beginner,2024-05-20
+U0390,Chen Wright,"Python Programming, Web Development",Advanced,2024-05-31
+U0391,Omar Young,"Python Programming, Data Science, Cloud Computing, Web Development",Beginner,2024-08-02
+U0392,Wei Turner,"Cybersecurity, Python Programming",Intermediate,2025-02-04
+U0393,Ravi Hill,"DevOps, Cybersecurity, Mobile Development, Web Development",Intermediate,2024-04-02
+U0394,Olivia Lee,"Python Programming, Cloud Computing",Beginner,2025-02-18
+U0395,Hana Adams,"Mobile Development, Web Development, Machine Learning",Beginner,2024-05-06
+U0396,Priya Jackson,Web Development,Advanced,2025-03-09
+U0397,Leo Clark,"Machine Learning, Web Development",Advanced,2024-06-11
+U0398,Ravi Rivera,DevOps,Advanced,2024-10-15
+U0399,Elijah Nelson,"Artificial Intelligence, Cybersecurity",Intermediate,2024-03-30
+U0400,Lena Johnson,Python Programming,Beginner,2024-11-04
+U0401,Zara Smith,"Python Programming, DevOps, Web Development, Databases",Beginner,2024-06-23
+U0402,Yuki Rivera,"Python Programming, Mobile Development, Machine Learning",Advanced,2024-12-26
+U0403,Elijah Sanchez,Cybersecurity,Intermediate,2025-05-06
+U0404,Mia Lewis,"Mobile Development, Data Science, DevOps, Machine Learning",Intermediate,2024-03-10
+U0405,Arjun Edwards,"Artificial Intelligence, DevOps, Machine Learning, Cybersecurity",Advanced,2024-12-21
+U0406,Ravi Hernandez,"Databases, Cloud Computing",Advanced,2024-12-18
+U0407,Vikram Davis,"Python Programming, Databases",Advanced,2024-01-17
+U0408,Carlos Mitchell,"Mobile Development, Web Development, Data Science",Intermediate,2024-03-13
+U0409,Nadia Collins,Web Development,Intermediate,2024-06-12
+U0410,Mei Roberts,DevOps,Intermediate,2024-01-06
+U0411,Hiroshi Thomas,"Data Science, DevOps",Intermediate,2025-02-06
+U0412,Charlotte Edwards,Python Programming,Intermediate,2024-08-12
+U0413,Marco Howard,"Databases, Artificial Intelligence",Intermediate,2024-06-28
+U0414,Yara Garcia,"Mobile Development, Web Development, Machine Learning, Cybersecurity",Beginner,2025-02-13
+U0415,Noah Thompson,DevOps,Intermediate,2025-05-02
+U0416,Charlotte Brown,"Machine Learning, Databases, Mobile Development",Advanced,2024-02-08
+U0417,Isabella Harris,"Python Programming, Databases, Machine Learning, Cloud Computing",Intermediate,2024-03-21
+U0418,Ethan Garcia,"Web Development, Mobile Development, Databases",Advanced,2024-10-10
+U0419,Hiroshi Phillips,"Cloud Computing, Web Development, Data Science",Beginner,2024-07-20
+U0420,Lena Rodriguez,DevOps,Beginner,2024-08-06
+U0421,Isabella Thompson,"Web Development, Data Science, Python Programming, Cybersecurity",Beginner,2024-11-22
+U0422,Vikram Howard,Artificial Intelligence,Beginner,2024-06-06
+U0423,Nina Hill,"Cloud Computing, Data Science, Databases, Cybersecurity",Intermediate,2025-03-29
+U0424,Yara Lewis,"Artificial Intelligence, Python Programming",Intermediate,2024-08-13
+U0425,Axel Martin,"Cloud Computing, Python Programming",Beginner,2025-01-20
+U0426,Logan Jones,"Cybersecurity, Databases, Web Development",Advanced,2024-02-01
+U0427,Leo Reed,"Cybersecurity, Artificial Intelligence, Web Development, Mobile Development",Intermediate,2024-02-10
+U0428,Nina Bailey,Cybersecurity,Advanced,2025-04-06
+U0429,Elijah Miller,"Machine Learning, Mobile Development, Web Development, Databases",Beginner,2024-03-05
+U0430,Emma Kim,Databases,Beginner,2025-02-25
+U0431,Elijah Cook,"DevOps, Data Science, Cybersecurity",Intermediate,2024-10-11
+U0432,Nina Gonzalez,"Cloud Computing, Cybersecurity, Artificial Intelligence",Beginner,2025-02-06
+U0433,Marco Miller,"Machine Learning, Mobile Development, Data Science, Python Programming",Advanced,2025-02-03
+U0434,Logan Morris,"Cybersecurity, DevOps, Databases",Intermediate,2024-07-15
+U0435,Lena Nelson,"Python Programming, Machine Learning, Cloud Computing, Web Development",Beginner,2024-11-12
+U0436,Felix Johnson,"DevOps, Web Development, Python Programming, Mobile Development",Intermediate,2025-04-16
+U0437,Aaliyah Bailey,"Python Programming, DevOps, Cloud Computing",Intermediate,2024-05-23
+U0438,Lena Morgan,Web Development,Beginner,2024-06-02
+U0439,Zoya Sanchez,"Cloud Computing, Databases, Data Science",Beginner,2024-08-14
+U0440,Dmitri Rivera,"Artificial Intelligence, Cybersecurity, DevOps, Databases",Beginner,2024-09-20
+U0441,Arjun Brown,"Cybersecurity, Databases, Machine Learning",Advanced,2025-03-26
+U0442,Olivia Anderson,"Web Development, Python Programming",Beginner,2024-01-17
+U0443,Dina Williams,"Web Development, Cloud Computing, DevOps",Intermediate,2024-09-15
+U0444,Nina Roberts,Python Programming,Beginner,2024-07-09
+U0445,Lena Mitchell,"Machine Learning, Artificial Intelligence, DevOps, Mobile Development",Beginner,2025-03-04
+U0446,Hiroshi Collins,Cloud Computing,Beginner,2024-07-16
+U0447,Ethan Martinez,"Web Development, Mobile Development",Advanced,2024-04-15
+U0448,Aaliyah Turner,"Cybersecurity, Python Programming, Mobile Development, Web Development",Beginner,2024-11-27
+U0449,Yuki Mitchell,Web Development,Intermediate,2024-11-07
+U0450,Jun Evans,"Databases, Mobile Development, DevOps",Intermediate,2024-05-09
+U0451,Dmitri Lopez,"Cybersecurity, Databases, Data Science",Beginner,2024-09-18
+U0452,Boris Gonzalez,"Cloud Computing, Data Science, Artificial Intelligence",Beginner,2024-06-21
+U0453,Chen Roberts,"Cloud Computing, Mobile Development, Cybersecurity",Beginner,2024-03-17
+U0454,Priya Bailey,Mobile Development,Intermediate,2024-12-04
+U0455,Sana Campbell,"Python Programming, Artificial Intelligence",Intermediate,2024-05-12
+U0456,Marco Walker,"Python Programming, Web Development, DevOps, Artificial Intelligence",Advanced,2024-04-23
+U0457,Hana Rivera,"Cybersecurity, Cloud Computing, Machine Learning",Advanced,2025-03-24
+U0458,Carlos Thompson,Artificial Intelligence,Beginner,2025-01-14
+U0459,Hiroshi Edwards,"DevOps, Data Science",Beginner,2024-06-30
+U0460,Zara Collins,"Databases, DevOps, Cybersecurity",Intermediate,2024-10-26
+U0461,Vikram Lopez,Artificial Intelligence,Beginner,2025-03-19
+U0462,Mia Hill,"Cybersecurity, Data Science",Advanced,2024-07-14
+U0463,Isla Young,Machine Learning,Beginner,2024-04-12
+U0464,Tariq Young,"Machine Learning, DevOps, Mobile Development, Databases",Beginner,2024-09-06
+U0465,Nadia Roberts,"DevOps, Python Programming",Beginner,2024-08-19
+U0466,Chen Thomas,"Mobile Development, Machine Learning",Intermediate,2025-02-06
+U0467,Isabella Davis,"Databases, Mobile Development, Cybersecurity, Web Development",Intermediate,2024-01-03
+U0468,Noah Baker,"DevOps, Python Programming",Intermediate,2025-01-22
+U0469,Fatima Smith,Web Development,Beginner,2024-12-21
+U0470,Clara White,"Data Science, Databases",Advanced,2024-10-28
+U0471,Jun Martinez,Python Programming,Intermediate,2025-04-30
+U0472,Vikram Lopez,"Databases, Machine Learning, DevOps",Intermediate,2024-07-02
+U0473,Fatima Martinez,"Python Programming, Web Development, Cybersecurity, DevOps",Beginner,2024-04-18
+U0474,Liam Carter,"Data Science, DevOps",Advanced,2024-11-29
+U0475,Noah Robinson,"Cybersecurity, Python Programming, Mobile Development",Advanced,2024-02-25
+U0476,Liam Williams,Databases,Intermediate,2024-07-13
+U0477,Amelia Gonzalez,"Artificial Intelligence, Machine Learning, Web Development",Advanced,2024-12-17
+U0478,Sophia White,"Data Science, Cybersecurity, Cloud Computing, Artificial Intelligence",Advanced,2024-12-24
+U0479,Harper Young,Cybersecurity,Advanced,2024-11-12
+U0480,Amelia Thompson,Data Science,Intermediate,2024-04-11
+U0481,Wei Sanchez,"Cybersecurity, Web Development, DevOps",Advanced,2024-07-28
+U0482,Vikram Martinez,Cybersecurity,Intermediate,2025-04-11
+U0483,Ananya Parker,"DevOps, Web Development, Python Programming, Artificial Intelligence",Advanced,2024-02-15
+U0484,James Cook,"Machine Learning, Data Science, Cybersecurity, DevOps",Advanced,2024-02-21
+U0485,Leila Turner,"Artificial Intelligence, Cloud Computing",Intermediate,2024-08-25
+U0486,Ethan Garcia,"Python Programming, Cloud Computing",Intermediate,2025-02-14
+U0487,Sana Kim,Data Science,Beginner,2024-01-05
+U0488,Harper Phillips,"DevOps, Mobile Development",Intermediate,2025-05-04
+U0489,Aaliyah Murphy,DevOps,Intermediate,2024-04-03
+U0490,James Walker,"Artificial Intelligence, Cloud Computing, Databases, DevOps",Intermediate,2025-02-13
+U0491,Marco Turner,"Data Science, Machine Learning",Advanced,2025-01-06
+U0492,Ava Howard,"Data Science, Databases",Advanced,2024-09-04
+U0493,Zoya Anderson,"DevOps, Python Programming, Machine Learning, Web Development",Intermediate,2024-02-27
+U0494,Jade Wright,Data Science,Intermediate,2024-12-01
+U0495,Sana Patel,"DevOps, Cybersecurity",Advanced,2024-12-18
+U0496,Logan Kim,"Artificial Intelligence, DevOps",Advanced,2024-12-12
+U0497,Leo Rodriguez,Python Programming,Advanced,2025-04-23
+U0498,Arjun Green,"Artificial Intelligence, Machine Learning, Data Science, Databases",Intermediate,2024-06-13
+U0499,Priya Harris,"Python Programming, Cybersecurity, Web Development",Advanced,2024-11-25
+U0500,Yara Walker,"Data Science, Artificial Intelligence",Intermediate,2025-02-14
