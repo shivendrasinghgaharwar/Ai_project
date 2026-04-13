@@ -63,7 +63,7 @@ export const apiClient = {
   },
 
   // Protected — requires Supabase JWT
-  logInteraction: async (userId: string, courseId: string, rating: number = 5) => {
+  logInteraction: async (userId: string, courseId: string, rating: number = 5, progress: number = 10) => {
     const headers = await getAuthHeaders();
     const res = await fetch(`${API_BASE}/interactions`, {
       method: 'POST',
@@ -72,7 +72,7 @@ export const apiClient = {
         user_id: userId,
         course_id: courseId,
         rating: rating,
-        progress: 10,
+        progress: progress,
       }),
     });
     return res.json();

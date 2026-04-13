@@ -160,3 +160,9 @@ a { text-decoration: none; color: inherit; }
   animation: breathingDot 2.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--primary);
 }
+
+/* ── Spinner (used by quiz generation loader) ─────── */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}

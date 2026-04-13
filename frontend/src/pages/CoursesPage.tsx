@@ -523,7 +523,7 @@ export function CoursesPage({ userId }: { userId: string }) {
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase();
-    let result = ALL_COURSES.filter((c) => {
+    const result = ALL_COURSES.filter((c) => {
       const matchQ =
         !q ||
         c.title.toLowerCase().includes(q) ||
@@ -546,7 +546,11 @@ export function CoursesPage({ userId }: { userId: string }) {
   function toggleWishlist(id: number) {
     setWishlist((prev) => {
       const next = new Set(prev);
-      next.has(id) ? next.delete(id) : next.add(id);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
       return next;
     });
   }

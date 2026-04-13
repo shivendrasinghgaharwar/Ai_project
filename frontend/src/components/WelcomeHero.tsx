@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabaseClient';
 
 export function WelcomeHero() {
   const [userName, setUserName] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -96,6 +98,7 @@ export function WelcomeHero() {
 
       <div style={{ display: 'flex', gap: '16px', marginTop: '8px', position: 'relative', zIndex: 1 }}>
         <motion.button
+          onClick={() => navigate('/dashboard/schedule')}
           whileHover={{ scale: 1.05, boxShadow: '0 10px 25px rgba(0,0,0,0.15)' }}
           whileTap={{ scale: 0.95 }}
           style={{

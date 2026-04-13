@@ -45,6 +45,21 @@ CORS(app)
 from routes.gemini import gemini_bp
 app.register_blueprint(gemini_bp)
 
+from routes.ml_engine import ml_bp
+app.register_blueprint(ml_bp)
+
+from routes.quiz import quiz_bp
+app.register_blueprint(quiz_bp)
+
+from routes.knowledge_graph import kg_bp
+app.register_blueprint(kg_bp)
+
+from routes.quiz_generator import quiz_gen_bp
+app.register_blueprint(quiz_gen_bp)
+
+from routes.support import support_bp
+app.register_blueprint(support_bp)
+
 # ─── JWT Auth Middleware ──────────────────────────────────────────────────────
 import jwt as pyjwt
 from functools import wraps

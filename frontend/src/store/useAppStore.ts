@@ -2,6 +2,13 @@ import { create } from 'zustand';
 import { supabase } from '../lib/supabaseClient';
 
 // ── Types ────────────────────────────────────────────────────────────────────
+export interface QuizQuestion {
+  question: string;
+  options: string[];
+  correctAnswer: string;
+  explanation: string;
+}
+
 export interface ScheduleEvent {
   id: string;
   title: string;
@@ -10,8 +17,12 @@ export interface ScheduleEvent {
   day: string;          // 'Monday', 'Tuesday', ...
   time: string;         // '09:00'
   duration: number;     // minutes
-  source: 'course' | 'manual';
+  source: 'course' | 'manual' | 'quiz';
   courseId?: string;
+  // Quiz-task extras
+  quizId?: string;
+  quizTopic?: string;
+  quizQuestions?: QuizQuestion[];
 }
 
 export interface TaskItem {
@@ -38,6 +49,48 @@ export function getTodayName(): string {
   return DAYS[new Date().getDay()];
 }
 
+export function generateDynamicDefaults(careerPath: string | undefined): ScheduleEvent[] {
+  const dynamicItems: ScheduleEvent[] = [];
+  const today = getTodayName();
+  let subjects = [
+    { title: 'General Studies', category: 'Foundation', color: '#5B8C5A' },
+    { title: 'Task Execution', category: 'Practice', color: '#B35E5B' }
+  ];
+
+  if (careerPath === 'Full-Stack') {
+    subjects = [
+      { title: 'Frontend (React)', category: 'Frontend', color: '#5B8C5A' },
+      { title: 'Backend (Node/Python)', category: 'Backend', color: '#B35E5B' },
+      { title: 'Databases (SQL)', category: 'Database', color: '#885B8C' },
+      { title: 'DevOps (Docker)', category: 'Infrastructure', color: '#5B698C' }
+    ];
+  } else if (careerPath === 'Data Science') {
+    subjects = [
+      { title: 'Python Math', category: 'Data Analysis', color: '#B35E5B' },
+      { title: 'Database Querying', category: 'Database', color: '#5B698C' },
+      { title: 'ML Models', category: 'Machine Learning', color: '#5B8C5A' },
+      { title: 'Entrepreneurship & Startups', category: 'Business', color: '#885B8C' }
+    ];
+  }
+
+  // Generate 2 or 3 daily tasks from the subjects
+  const times = ['09:00', '13:00', '15:00', '18:00'];
+  subjects.slice(0, 3).forEach((sub, i) => {
+    dynamicItems.push({
+      id: crypto.randomUUID(),
+      title: sub.title,
+      category: sub.category,
+      color: sub.color,
+      day: today,
+      time: times[i],
+      duration: 60,
+      source: 'course'
+    });
+  });
+
+  return dynamicItems;
+}
+
 // ── Store Definition ─────────────────────────────────────────────────────────
 interface AppState {
   // Schedule
@@ -53,10 +106,18 @@ interface AppState {
   uncompleteTask: (id: string) => void;
   resetDailyTasks: () => void;
 
+  // Active Quiz
+  activeQuiz: ScheduleEvent | null;
+  setActiveQuiz: (task: ScheduleEvent | null) => void;
+
   // Derived helpers
   getTodayEvents: () => ScheduleEvent[];
   getTodayPendingTasks: () => TaskItem[];
   getTodayCompletedTasks: () => TaskItem[];
+
+  // User Profile
+  userProfile: any | null;
+  fetchUserProfile: () => Promise<void>;
 
   // Search
   searchQuery: string;
@@ -70,6 +131,11 @@ interface AppState {
   recommendedCourses: Course[];
   isLoadingRecommendations: boolean;
   fetchRecommendations: () => Promise<void>;
+
+  // Knowledge Graph Syncing
+  kgRefreshTrigger: number;
+  triggerKgRefresh: () => void;
+  markCourseComplete: (userId: string, courseId: string) => Promise<void>;
 }
 
 export const useAppStore = create<AppState>((set, get) => ({
@@ -114,6 +180,10 @@ export const useAppStore = create<AppState>((set, get) => ({
 
   resetDailyTasks: () => set({ completedTaskIds: new Set() }),
 
+  // ── Active Quiz ─────────────────────────────────────────────────────
+  activeQuiz: null,
+  setActiveQuiz: (task) => set({ activeQuiz: task }),
+
   // ── Derived Helpers ─────────────────────────────────────────────────
   getTodayEvents: () => {
     const today = getTodayName();
@@ -147,6 +217,22 @@ export const useAppStore = create<AppState>((set, get) => ({
         time: e.time,
         completedAt: new Date(),
       }));
+  },
+
+  // ── User Profile ────────────────────────────────────────────────────
+  userProfile: null,
+  fetchUserProfile: async () => {
+    const { data: { session } } = await supabase.auth.getSession();
+    if (session?.user) {
+      const { data } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('id', session.user.id)
+        .single();
+      if (data) {
+        set({ userProfile: data });
+      }
+    }
   },
 
   // ── Search State ────────────────────────────────────────────────────
@@ -205,6 +291,23 @@ export const useAppStore = create<AppState>((set, get) => ({
     } catch (error) {
       console.error('Error fetching course recommendations:', error);
       set({ isLoadingRecommendations: false });
+    }
+  },
+
+  // ── Knowledge Graph Syncing ──────────────────────────────────────────
+  kgRefreshTrigger: 0,
+  triggerKgRefresh: () => set((state) => ({ kgRefreshTrigger: state.kgRefreshTrigger + 1 })),
+  markCourseComplete: async (userId, courseId) => {
+    try {
+      const { apiClient } = await import('../api/client');
+      // POST the interaction with progress 100 to mark it mathematically fully completed.
+      // This routes through Flask backwards proxy which handles the database insertion efficiently
+      await apiClient.logInteraction(userId, courseId, 5, 100);
+
+      // Force graph to clear and fetch newly green nodes
+      set((state) => ({ kgRefreshTrigger: state.kgRefreshTrigger + 1 }));
+    } catch (e) {
+      console.error("Failed to mark course as complete: ", e);
     }
   },
 }));

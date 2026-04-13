@@ -2,11 +2,13 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   X, BookOpen, BarChart2, Tag, Sparkles,
-  Send, ChevronDown, ChevronUp, GraduationCap
+  Send, ChevronDown, ChevronUp, GraduationCap, Loader2, CheckCircle2
 } from 'lucide-react';
+import confetti from 'canvas-confetti';
 import { supabase } from '../lib/supabaseClient';
 import { apiClient } from '../api/client';
 import { askGemini } from '../lib/geminiClient';
+import { useAppStore, getTodayName } from '../store/useAppStore';
 
 interface CourseDrawerProps {
   course: any | null;
@@ -33,8 +35,14 @@ export function CourseDrawer({ course, userId, onClose }: CourseDrawerProps) {
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [enrolled, setEnrolled] = useState(false);
+  const [isMastered, setIsMastered] = useState(false);
+  const [quizGenerating, setQuizGenerating] = useState(false);
+  const [quizToast, setQuizToast] = useState<string | null>(null);
   const chatEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const addScheduleEvent = useAppStore(s => s.addScheduleEvent);
+  const BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
 
   // Load user's skill level from Supabase on mount  
   useEffect(() => {
@@ -236,24 +244,170 @@ export function CourseDrawer({ course, userId, onClose }: CourseDrawerProps) {
                 </div>
               )}
 
-              {/* Enroll Button */}
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={handleEnroll}
+              {/* Mastery Action Button */}
+              {enrolled ? (
+                <>
+                  <div style={{ padding: '4px 8px', background: 'var(--surface-high)', borderRadius: 12 }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6, fontSize: 13, fontWeight: 600 }}>
+                      <span style={{ color: 'var(--on-surface-variant)' }}>Course Progress</span>
+                      <span style={{ color: 'var(--primary)' }}>{isMastered ? '100%' : 'In Progress'}</span>
+                    </div>
+                    <div style={{ width: '100%', height: 6, background: 'var(--surface-base)', borderRadius: 4, overflow: 'hidden' }}>
+                      <motion.div 
+                        initial={{ width: 0 }}
+                        animate={{ width: isMastered ? '100%' : '45%' }}
+                        transition={{ duration: 1 }}
+                        style={{ height: '100%', background: 'var(--primary)' }}
+                      />
+                    </div>
+                  </div>
+
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={async (e) => {
+                      if (isMastered) return;
+                      const rect = e.currentTarget.getBoundingClientRect();
+                      confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: {
+                          x: (rect.left + rect.width / 2) / window.innerWidth,
+                          y: (rect.top + rect.height / 2) / window.innerHeight
+                        },
+                        colors: ['#5B8C5A', '#D4A853', '#BA7517'],
+                        disableForReducedMotion: true
+                      });
+                      setIsMastered(true);
+                      if (course?.course_id) {
+                        const { useAppStore } = await import('../store/useAppStore');
+                        await useAppStore.getState().markCourseComplete(userId, course.course_id);
+                      }
+                    }}
+                    style={{
+                      width: '100%', padding: '15px 24px', borderRadius: 50, border: 'none',
+                      background: isMastered ? '#EAF3DE' : 'var(--primary)',
+                      color: isMastered ? 'var(--primary)' : '#fff',
+                      fontWeight: 700, fontSize: 15, cursor: isMastered ? 'default' : 'pointer',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10,
+                      transition: 'all 0.3s ease',
+                      boxShadow: isMastered ? 'none' : '0 8px 30px rgba(91,140,90,0.35)',
+                    }}
+                  >
+                    <CheckCircle2 size={18} />
+                    {isMastered ? 'Course Mastered!' : 'Mark Course Complete'}
+                  </motion.button>
+                </>
+              ) : (
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={handleEnroll}
+                  style={{
+                    width: '100%', padding: '15px 24px', borderRadius: 50, border: 'none',
+                    background: 'var(--primary)',
+                    color: '#fff',
+                    fontWeight: 700, fontSize: 15, cursor: 'pointer',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10,
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 8px 30px rgba(91,140,90,0.35)',
+                  }}
+                >
+                  <GraduationCap size={18} />
+                  Enroll Now — It's Free
+                </motion.button>
+              )}
+
+              {/* Quiz Button — Generate & Schedule */}
+              <button
+                onClick={async () => {
+                  if (quizGenerating) return;
+                  setQuizGenerating(true);
+                  setQuizToast(null);
+                  try {
+                    const res = await fetch(`${BASE}/api/generate-quiz`, {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({
+                        user_id: userId,
+                        topic: course?.title || 'General Study',
+                        course_id: course?.id || '',
+                      }),
+                    });
+                    const data = await res.json();
+                    if (!res.ok || !data.success) throw new Error(data.error || 'Failed');
+
+                    // Add quiz task to today's schedule in Zustand
+                    const quizEvent = {
+                      id: `quiz-${data.quiz_id || Date.now()}`,
+                      title: `Quiz: ${course?.title}`,
+                      category: course?.category || 'Study',
+                      color: '#7C3AED',
+                      day: getTodayName(),
+                      time: new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }),
+                      duration: 15,
+                      source: 'quiz' as const,
+                      courseId: course?.id,
+                      quizId: data.quiz_id,
+                      quizTopic: course?.title,
+                      quizQuestions: data.questions,
+                    };
+                    addScheduleEvent(quizEvent);
+                    setQuizToast('✅ Quiz ready in Tasks!');
+                    setTimeout(() => setQuizToast(null), 4000);
+                  } catch (e: any) {
+                    setQuizToast(`⚠️ ${e.message || 'Could not generate quiz'}`);
+                    setTimeout(() => setQuizToast(null), 5000);
+                  } finally {
+                    setQuizGenerating(false);
+                  }
+                }}
+                disabled={quizGenerating}
                 style={{
-                  width: '100%', padding: '15px 24px', borderRadius: 50, border: 'none',
-                  background: enrolled ? 'var(--primary-container)' : 'var(--primary)',
-                  color: enrolled ? 'var(--primary)' : '#fff',
-                  fontWeight: 700, fontSize: 15, cursor: 'pointer',
+                  width: '100%', padding: '14px 20px', borderRadius: 16,
+                  border: '1.5px solid #7C3AED',
+                  background: quizGenerating ? '#F5F3FF' : 'transparent',
+                  color: '#7C3AED',
+                  fontWeight: 700, fontSize: 14, cursor: quizGenerating ? 'not-allowed' : 'pointer',
                   display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10,
-                  transition: 'all 0.3s ease',
-                  boxShadow: enrolled ? 'none' : '0 8px 30px rgba(91,140,90,0.35)',
+                  transition: 'all 0.2s ease', opacity: quizGenerating ? 0.75 : 1,
+                }}
+                onMouseEnter={e => {
+                  if (!quizGenerating) {
+                    (e.currentTarget as HTMLElement).style.background = '#7C3AED';
+                    (e.currentTarget as HTMLElement).style.color = '#fff';
+                  }
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLElement).style.background = quizGenerating ? '#F5F3FF' : 'transparent';
+                  (e.currentTarget as HTMLElement).style.color = '#7C3AED';
                 }}
               >
-                <GraduationCap size={18} />
-                {enrolled ? '✅ Enrolled! Start Learning →' : 'Enroll Now — It\'s Free'}
-              </motion.button>
+                {quizGenerating ? (
+                  <><Loader2 size={16} style={{ animation: 'spin 1s linear infinite' }} /> Generating AI Quiz… 🧠</>
+                ) : (
+                  '🧠 Generate Checkpoint Quiz'
+                )}
+              </button>
+
+              {/* Toast notification */}
+              <AnimatePresence>
+                {quizToast && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    style={{
+                      padding: '10px 14px', borderRadius: 12, fontSize: 13, fontWeight: 600,
+                      background: quizToast.startsWith('⚠') ? '#FCEBEB' : '#EAF3DE',
+                      color: quizToast.startsWith('⚠') ? '#A32D2D' : '#27500A',
+                      border: `1px solid ${quizToast.startsWith('⚠') ? '#FECACA' : '#BBF7D0'}`,
+                    }}
+                  >
+                    {quizToast}
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
               {/* AI Chat Toggle */}
               <div>

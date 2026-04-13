@@ -14,6 +14,7 @@ import { CoursesPage } from './pages/CoursesPage';
 import { ProgressPage } from './pages/ProgressPage';
 import { SchedulePage } from './pages/SchedulePage';
 import { TasksPage } from './pages/TasksPage';
+import { SupportPage } from './pages/SupportPage';
 
 function RouteWrapper({ Component }: { Component: any }) {
   const context = useOutletContext<{ userId: string }>();
@@ -83,6 +84,7 @@ function AnimatedRoutes({ session, userId }: any) {
           <Route path="progress" element={<RouteWrapper Component={ProgressPage} />} />
           <Route path="schedule" element={<RouteWrapper Component={SchedulePage} />} />
           <Route path="tasks" element={<RouteWrapper Component={TasksPage} />} />
+          <Route path="support" element={<RouteWrapper Component={SupportPage} />} />
           <Route path="settings" element={<SettingsPage />} />
         </Route>
       </Routes>

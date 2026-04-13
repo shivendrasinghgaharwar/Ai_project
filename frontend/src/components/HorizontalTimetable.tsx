@@ -1,18 +1,31 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Edit2, X, Check } from 'lucide-react';
-import { useAppStore, getTodayName, type ScheduleEvent } from '../store/useAppStore';
+import { useAppStore, getTodayName, generateDynamicDefaults, type ScheduleEvent } from '../store/useAppStore';
 import { supabase } from '../lib/supabaseClient';
+import { logStudySession } from '../lib/logStudySession';
 
 export function HorizontalTimetable() {
   const {
     scheduleEvents, setScheduleEvents,
     completeTask, completedTaskIds,
+    userProfile, fetchUserProfile
   } = useAppStore();
 
   const [editingId, setEditingId] = useState<string | null>(null);
   const [completingId, setCompletingId] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
+  const [userId, setUserId] = useState<string | null>(null);
+
+  // Get the current user's ID on mount
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUserId(session?.user?.id ?? null);
+      if (session?.user?.id && !userProfile) {
+        fetchUserProfile();
+      }
+    });
+  }, [userProfile, fetchUserProfile]);
 
   const today = getTodayName();
   const todayEvents = scheduleEvents.filter((e) => e.day === today && !completedTaskIds.has(e.id));
@@ -25,7 +38,7 @@ export function HorizontalTimetable() {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session?.user) {
         // Set default items for new / unauthenticated users
-        setScheduleEvents(DEFAULT_ITEMS);
+        setScheduleEvents(generateDynamicDefaults(undefined));
         setLoaded(true);
         return;
       }
@@ -49,13 +62,21 @@ export function HorizontalTimetable() {
         }));
         setScheduleEvents(events);
       } else {
-        // Seed defaults if DB is empty
-        setScheduleEvents(DEFAULT_ITEMS);
+        // Seed defaults if DB is empty, dynamically based on target_goal or career_path
+        
+        let path = userProfile?.career_path || userProfile?.target_goal;
+        if (!path) {
+          // If profile wasn't ready in store, fetch it quickly here
+          const { data: prof } = await supabase.from('profiles').select('*').eq('id', session.user.id).single();
+          path = prof?.career_path || prof?.target_goal;
+        }
+
+        setScheduleEvents(generateDynamicDefaults(path));
       }
       setLoaded(true);
     };
     load();
-  }, []);
+  }, [scheduleEvents.length, setScheduleEvents, userProfile]);
 
   const editItem = scheduleEvents.find((i) => i.id === editingId);
 
@@ -71,10 +92,20 @@ export function HorizontalTimetable() {
 
   const handleComplete = (id: string) => {
     setCompletingId(id);
+    const task = scheduleEvents.find(e => e.id === id);
     // Delay to let animation play
-    setTimeout(() => {
+    setTimeout(async () => {
       completeTask(id);
       setCompletingId(null);
+
+      // Log study session to Supabase
+      if (userId && task) {
+        await logStudySession({
+          userId,
+          category: task.category || "General",
+          durationMinutes: task.duration || 60,
+        });
+      }
     }, 600);
   };
 
@@ -303,12 +334,4 @@ function ScheduleEditModal({ item, onSave, onClose }: { item: ScheduleEvent, onS
   );
 }
 
-// ── Default Schedule Items ──────────────────────────────────────────────────
-const today = getTodayName();
-const DEFAULT_ITEMS: ScheduleEvent[] = [
-  { id: 'default-1', time: '09:00', title: 'Python Basics', category: 'Backend', color: '#5B8C5A', day: today, duration: 60, source: 'manual' },
-  { id: 'default-2', time: '10:30', title: 'React Hooks', category: 'Frontend', color: '#D4A853', day: today, duration: 60, source: 'manual' },
-  { id: 'default-3', time: '12:00', title: 'SQL Queries', category: 'Databases', color: '#7A6B5A', day: today, duration: 60, source: 'manual' },
-  { id: 'default-4', time: '14:00', title: 'TensorFlow 101', category: 'ML', color: '#8FAE8F', day: today, duration: 60, source: 'manual' },
-  { id: 'default-5', time: '15:30', title: 'Docker Intro', category: 'DevOps', color: '#5B8C5A', day: today, duration: 60, source: 'manual' },
-];
+
